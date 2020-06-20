@@ -19,5 +19,4 @@ export default ({ type, shows }) => {
       <Row>{List}</Row>
     </div>
   );
-
 };

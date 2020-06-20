@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { Col, Container, Row, Spinner } from "react-bootstrap";
-import InnerHtml from "dangerously-set-html-content";
-import InfoCard from "../ShowCard/index";
 import axios from 'axios';
+import ShowCard from "../ShowCard/index";
+import LoaderComponent from '../Loader';
 
 class ShowInfo extends Component {
   state = {
@@ -13,7 +12,7 @@ class ShowInfo extends Component {
     const { show } = this.state;
     const id = this.props.match.params.id;
     if (!show) {
-        axios.get(`http://api.tvmaze.com/shows/${id}`)
+      axios.get(`http://api.tvmaze.com/shows/${id}`)
         .then((res) => this.setState({ show: res.data }))
         .catch(() => this.setState({ error: true }));
     }
@@ -21,28 +20,17 @@ class ShowInfo extends Component {
 
   render() {
     const { show } = this.state;
-    return show ? (
-      <Container>
-        <Row>
-          <Col sm={12} md={8} lg={8} xl={8}>
-            <h2>{show.name}</h2>
-            <img
-              className="infoImage"
-              src={show.image ? show.image.medium : null}
-              alt={show.name}
-            />
-        <InnerHtml html={show.summary} />
-          </Col>
-          <Col sm={12} md={4} lg={4} xl={4}>
-            <InfoCard show={show} />
-          </Col>
-        </Row>
-      </Container>
-    ) : (
-      <Spinner className="spinner" animation="border" role="status">
-        <span className="sr-only">Loading...</span>
-      </Spinner>
-    );
+    return  show ? (
+      <div>
+          <h3>{show.name}</h3>
+          <img
+            className="infoImage"
+            src={show.image ? show.image.medium : null}
+          />
+          <p>{show.summary}</p>
+          <ShowCard show={show} />
+      </div>
+    ): <LoaderComponent/>;
   }
 }
 

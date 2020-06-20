@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Show from "../Show";
-import { Row, Container, Spinner } from "react-bootstrap";
-import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
+import { Redirect } from "react-router-dom";
 import axios from 'axios';
+import LoaderComponent from '../Loader/index';
 
 class GenreShows extends Component {
   state = {
@@ -33,11 +33,9 @@ class GenreShows extends Component {
   render() {
     const { shows, backToprevious } = this.state;
     const { match } = this.props;
-    console.log("Match",match)
     return shows ? (
-      <Container>
+      <div>
         <h1>{match.params.id}</h1>
-        <Row>
           {shows.map((show) => (
             <Show
               image={show.image ? show.image.medium : null}
@@ -46,14 +44,9 @@ class GenreShows extends Component {
               key={`Show-${show.id}`}
             />
           ))}
-        </Row>
         {backToprevious ? <Redirect to="/" /> : null}
-      </Container>
-    ) : (
-      <Spinner className="spinner" animation="border" role="status">
-        <span className="sr-only">Loading...</span>
-      </Spinner>
-    );
+      </div>
+    ) : <LoaderComponent/>
   }
 }
 

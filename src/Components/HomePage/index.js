@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ShowList from "../ShowList/index";
 import axios from 'axios';
 import Form from './Form'
+import LoaderComponent from '../Loader/index';
 
 var REQUEST_URL = 'http://api.tvmaze.com/shows';
 
@@ -58,20 +59,19 @@ class HomePage extends Component {
   };
 
   render() {
-    const { showsData, inputValue, isLoading } = this.state;
+    const { showsData, inputValue,isLoading } = this.state;
     const genresData = this.fetchGenresData();
     return (
       <div>
         <Form handleChange={this.handleChange}
               inputValue={inputValue}
               handleSubmit={this.handleSubmit}/>
+        {!isLoading ? <LoaderComponent/> : null}
         {genresData.length ? (
           genresData.map((genreType) => (
             <ShowList type={genreType} shows={showsData} key={`Genre-${genreType}`} />
           ))
-        ) : (
-          <h2>{isLoading ? 'Got Error' : 'No TV Shows'}</h2>
-        )}
+        ) : null }
       </div>
     );
   }
