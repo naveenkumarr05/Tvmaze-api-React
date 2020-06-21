@@ -2,18 +2,23 @@ import React, { Component } from "react";
 import axios from 'axios';
 import ShowCard from "../ShowCard/index";
 
-class ShowInfo extends Component {
+class ShowDetail extends Component {
   
   state = {
     show: null,
   };
 
   componentDidMount() {
+    this.fetchShowData();
+  }
+  
+  fetchShowData() {
     const id = this.props.match.params.id;
 
     axios.get(`http://api.tvmaze.com/shows/${id}`)
         .then((res) => this.setState({ show: res.data }))
         .catch(() => this.setState({ error: true }));
+
   }
 
   render() {
@@ -35,4 +40,4 @@ class ShowInfo extends Component {
   }
 }
 
-export default ShowInfo;
+export default ShowDetail;

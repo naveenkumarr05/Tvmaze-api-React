@@ -1,9 +1,28 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { configure, mount } from 'enzyme';
+import { MemoryRouter } from 'react-router'
+import HomePage from './Components/HomePage'
+import Adapter from "enzyme-adapter-react-16";
 import App from './App';
+import ShowDetail from './Components/ShowDetails';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+configure({ adapter: new Adapter() });
+
+describe('routes using memory router', () => {
+  it('should render HomePage Component without error', () => {
+    const wrapper = mount(
+      <MemoryRouter initialEntries={[ '/' ]}>
+        <App/>
+      </MemoryRouter>
+    );
+    expect(wrapper.find(HomePage)).toHaveLength(1);
+  })
+  it('should render ShowInfo Component without error', () => {
+    const wrapper = mount(
+      <MemoryRouter initialEntries={[ '/show/:id' ]}>
+        <App/>
+      </MemoryRouter>
+    );
+    expect(wrapper.find(ShowDetail)).toHaveLength(1);
+  })
+})

@@ -9,10 +9,13 @@
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
     "dangerously-set-html-content": "^1.0.5",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
     "react-loader-spinner": "^3.1.14",
+    "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "string-strip-html": "^4.5.0"

@@ -1,7 +1,7 @@
 import React from 'react';
 import loaderSrc from '../../assets/loader.gif';
 
-const Loader = props =>(
+const Loader = () =>(
     <div>
         <img
             alt="Loader icon"
