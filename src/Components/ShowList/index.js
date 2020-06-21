@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Row } from "react-bootstrap";
 
 export default ({ type, shows }) => {
-  console.log("ShowList",shows);
   let List = shows
     .map((show,index) => (
       <div className="column_pic" key={index}> 

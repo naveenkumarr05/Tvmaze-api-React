@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ShowList from "../ShowList/index";
 import axios from 'axios';
-import InputForm from './InputForm';
+import ShowForm from './ShowForm';
 
 var REQUEST_URL = 'http://api.tvmaze.com/shows';
 
@@ -35,10 +35,11 @@ class HomePage extends Component {
 
   render() {
     const { showsData } = this.state;
+    console.log("ShowsData",showsData);
     const genresData = this.fetchGenresData();
     return (
       <div>
-        <InputForm />
+        <ShowForm />
         {genresData.length ? (
           genresData.map((genreType,index) => (
             <ShowList type={genreType} shows={showsData} key={index} />

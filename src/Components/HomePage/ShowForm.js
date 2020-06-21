@@ -3,8 +3,9 @@ import ShowList from '../ShowList';
 import LoaderComponent from '../Loader';
 import axios from 'axios';
 import Form from './Form';
+import { TITLE } from '../constants';
 
-class InputForm extends Component {
+class ShowForm extends Component {
     state = {
         showsData: null,
         inputValue: "",
@@ -52,7 +53,7 @@ class InputForm extends Component {
 
         return (
             <div>
-                <h1>"Here you can find all of your most loved series"</h1>
+                <h1>{TITLE}</h1>
                 <Form handleChange={this.handleChange}
                       inputValue={inputValue}
                       handleSubmit={this.handleSubmit} />
@@ -60,8 +61,8 @@ class InputForm extends Component {
                      isLoading && <LoaderComponent/>
                     }
                     {genresData.length ? (
-                        genresData.map((genreType) => (
-                            <ShowList type={genreType} shows={showsData} key={`Genre-${genreType}`} />
+                        genresData.map((genreType, index) => (
+                            <ShowList type={genreType} shows={showsData} key={index} />
                         ))
                     ) : null}
                 </div>
@@ -70,4 +71,4 @@ class InputForm extends Component {
     }
 }
 
-export default InputForm;
+export default ShowForm;
