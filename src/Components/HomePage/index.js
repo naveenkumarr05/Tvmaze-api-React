@@ -35,7 +35,6 @@ class HomePage extends Component {
 
   render() {
     const { showsData } = this.state;
-    console.log("ShowsData",showsData);
     const genresData = this.fetchGenresData();
     return (
       <div>
