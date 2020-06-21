@@ -1,16 +1,14 @@
-import React from "react";
-import Loader from 'react-loader-spinner';
+import React from 'react';
+import loaderSrc from '../../assets/loader.gif';
 
-export default class LoaderComponent extends React.Component {
-    render() {
-        return (
-            <Loader
-                type="Loading"
-                color="#00BFFF"
-                height={100}
-                width={100}
-                timeout={3000}
-            />
-        );
-    }
-}
+const Loader = props =>(
+    <div>
+        <img
+            alt="Loader icon"
+            src={loaderSrc}
+            className="loader"
+        />
+    </div>
+);
+
+export default Loader;

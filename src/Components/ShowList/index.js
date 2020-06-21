@@ -1,16 +1,16 @@
 import React from "react";
-import Show from "../Show";
+import { Link } from "react-router-dom";
 import { Row } from "react-bootstrap";
 
 export default ({ type, shows }) => {
   let List = shows
-    .map((show) => (
-      <Show
-        image={show.image ? show.image.medium : null}
-        name={show.name}
-        show={show}
-        key={`Show-${show.id}`}
-      />
+    .map((show,index) => (
+      <div className="column_pic" key={index}> 
+        <Link to={{ pathname: `/show/${show.id}`, show }}>
+          <img src={show.image ? show.image.medium : null} style={{ width: "100%" }} />
+          <div className="show_name">{show.name}</div>
+        </Link>
+      </div>
     ))
 
   return (

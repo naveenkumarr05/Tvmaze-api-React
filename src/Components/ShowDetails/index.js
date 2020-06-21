@@ -1,36 +1,37 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import ShowCard from "../ShowCard/index";
-import LoaderComponent from '../Loader';
 
 class ShowInfo extends Component {
+  
   state = {
-    show: this.props.location.show,
+    show: null,
   };
 
   componentDidMount() {
-    const { show } = this.state;
     const id = this.props.match.params.id;
-    if (!show) {
-      axios.get(`http://api.tvmaze.com/shows/${id}`)
+
+    axios.get(`http://api.tvmaze.com/shows/${id}`)
         .then((res) => this.setState({ show: res.data }))
         .catch(() => this.setState({ error: true }));
-    }
   }
 
   render() {
     const { show } = this.state;
-    return  show ? (
+    return (
       <div>
-          <h3>{show.name}</h3>
-          <img
-            className="infoImage"
-            src={show.image ? show.image.medium : null}
-          />
-          <p>{show.summary}</p>
-          <ShowCard show={show} />
+        {show !== null &&
+          <div>
+            <h3>{show.name}</h3>
+            <img
+              className="image_display"
+              src={show.image.medium}
+            />
+            <p>{show.summary}</p>
+            <ShowCard show={show} />
+          </div>}
       </div>
-    ): <LoaderComponent/>;
+    );
   }
 }
 
