@@ -1,4 +1,12 @@
+REACT JS - TVMAZE API 
+
+We can search for tv series and get information through TVMAZE API http://www.tvmaze.com/api
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Application Features:-
+Search bar to search for TV shows
+we can see all the shows like Drama, Comedy, Action.. 
 
 ## Available Scripts
 
