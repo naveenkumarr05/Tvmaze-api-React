@@ -49,6 +49,7 @@ class ShowForm extends Component {
 
     render() {
         const { showsData, inputValue, isLoading } = this.state
+        console.log("FormSHow",showsData);
         const genresData = this.fetchGenresData();
 
         return (

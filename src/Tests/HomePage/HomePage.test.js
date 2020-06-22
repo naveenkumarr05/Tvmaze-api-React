@@ -12,7 +12,6 @@ configure({ adapter: new Adapter() });
 
 axios.get.mockResolvedValue(showsMockData);
 
-
 const showsdata = { data: showsMockData.shows };
 axios.get.mockResolvedValue(showsdata);
 

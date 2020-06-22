@@ -8,7 +8,6 @@ var REQUEST_URL = 'http://api.tvmaze.com/shows';
 class HomePage extends Component {
   state = {
     showsData: null,
-    inputValue: "",
     isLoading: false,
   };
 
