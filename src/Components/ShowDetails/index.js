@@ -29,6 +29,7 @@ class ShowDetail extends Component {
           <div>
             <h3>{show.name}</h3>
             <img
+              alt=''
               className="image_display"
               src={show.image.medium}
             />
