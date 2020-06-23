@@ -1,7 +1,7 @@
 import React from 'react';
 import { configure, shallow } from 'enzyme';
 import Adapter from "enzyme-adapter-react-16";
-import ShowList from '../../Components/show-list';
+import ShowList from '../../components/show-list';
 
 configure({ adapter: new Adapter() });
 

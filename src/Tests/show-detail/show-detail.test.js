@@ -1,9 +1,9 @@
 import React from 'react';
 import { configure, mount } from 'enzyme';
 import Adapter from "enzyme-adapter-react-16";
-import ShowDetail from '../../Components/show-details';
-import ShowCard from '../../Components/show-card';
-import showMockData from '../Fixtures/show-fixtures';
+import ShowDetail from '../../components/show-details';
+import ShowCard from '../../components/show-card';
+import showMockData from '../fixtures/show-fixtures';
 
 configure({ adapter: new Adapter() });
 

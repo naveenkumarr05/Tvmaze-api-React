@@ -5,6 +5,7 @@ We can search for tv series and get information through TVMAZE API http://www.tv
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Application Features:-
+
 Search bar to search for TV shows
 we can see all the shows like Drama, Comedy, Action.. 
 
@@ -22,7 +23,7 @@ You will also see any lint errors in the console.
 
 ### `npm test`
 
-# npm test .
+npm test .
 Launches the test runner in the interactive watch mode.
 See the section about running tests for more information.
 
@@ -50,9 +51,9 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Project Guidelines :
 
-1.File Naming Convention, Method Naming Convention, Component Naming Convention, variable, object declaration : camelCase Example : fetchShowsData(), shows etc..
+1.File Naming Convention, Method Naming Convention, Component Naming Convention, variable, object declaration : camelCase Example : showForm.js, fetchShowsData(), ShowCard etc..
+
 2.Folder Naming Convention like kabab-case Example : show-card,
-3.Components in React : PascalCase Example : ShowCard.
 
 ## Project dependencies and devDependencies :
 

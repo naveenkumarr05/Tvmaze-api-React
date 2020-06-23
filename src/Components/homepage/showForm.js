@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ShowList from '../show-list';
 import LoaderComponent from '../loader';
 import axios from 'axios';
-import Form from './form';
+import Form from './inputForm';
 import { TITLE } from '../constants';
 
 class ShowForm extends Component {

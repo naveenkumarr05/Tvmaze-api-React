@@ -1,7 +1,7 @@
 import React from 'react';
 import { configure, mount } from 'enzyme';
 import Adapter from "enzyme-adapter-react-16";
-import ShowForm from '../../Components/homepage/show-form';
+import ShowForm from '../../components/homepage/showForm';
 
 configure({ adapter: new Adapter() });
 

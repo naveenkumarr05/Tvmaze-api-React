@@ -1,7 +1,7 @@
 import React from 'react';
 import { configure, shallow } from 'enzyme';
 import Adapter from "enzyme-adapter-react-16";
-import Loader from '../../Components/loader';
+import Loader from '../../components/loader';
 import loaderSrc from '../.././assets/loader.gif';
 
 configure({ adapter: new Adapter() });
