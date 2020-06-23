@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import ShowList from "../ShowList/index";
+import ShowList from "../show-list";
 import axios from 'axios';
-import ShowForm from './ShowForm';
+import ShowForm from './show-form';
 
 var REQUEST_URL = 'http://api.tvmaze.com/shows';
 

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import './App.css';
-import HomePage from './Components/HomePage'
-import ShowDetail from './Components/ShowDetails';
+import HomePage from './Components/homepage'
+import ShowDetail from './Components/show-details';
 
 class App extends Component {
 

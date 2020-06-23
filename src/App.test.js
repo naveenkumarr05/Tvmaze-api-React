@@ -1,10 +1,10 @@
 import React from 'react';
 import { configure, mount } from 'enzyme';
 import { MemoryRouter } from 'react-router'
-import HomePage from './Components/HomePage'
+import HomePage from './Components/homepage'
 import Adapter from "enzyme-adapter-react-16";
 import App from './App';
-import ShowDetail from './Components/ShowDetails';
+import ShowDetail from './Components/show-details';
 
 configure({ adapter: new Adapter() });
 

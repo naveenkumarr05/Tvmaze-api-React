@@ -1,7 +1,7 @@
 import React from 'react';
 import { configure, shallow } from 'enzyme';
 import Adapter from "enzyme-adapter-react-16";
-import ShowCard from '../../Components/ShowCard';
+import ShowCard from '../../Components/show-card';
 import showMockData from '../Fixtures/show-fixtures';
 
 configure({ adapter: new Adapter() });

@@ -1,10 +1,10 @@
 import React from 'react';
-import { configure, mount, shallow } from 'enzyme';
+import { configure, shallow } from 'enzyme';
 import Adapter from "enzyme-adapter-react-16";
-import HomePage from '../../Components/HomePage';
+import HomePage from '../../Components/homepage';
 import showsMockData from '../Fixtures/shows-data-fixtures';
 import axios from 'axios';
-import ShowForm from '../../Components/HomePage/ShowForm';
+import ShowForm from '../../Components/homepage/show-form';
 
 jest.mock("axios");
 

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from 'axios';
-import ShowCard from "../ShowCard/index";
+import ShowCard from "../show-card/index";
 
 class ShowDetail extends Component {
 

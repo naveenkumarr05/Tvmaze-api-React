@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import ShowList from '../ShowList';
-import LoaderComponent from '../Loader';
+import ShowList from '../show-list';
+import LoaderComponent from '../loader';
 import axios from 'axios';
-import Form from './Form';
+import Form from './form';
 import { TITLE } from '../constants';
 
 class ShowForm extends Component {
