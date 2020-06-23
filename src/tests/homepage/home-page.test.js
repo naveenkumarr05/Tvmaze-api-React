@@ -22,18 +22,18 @@ describe('<HomePage/>', () => {
         wrapper = shallow(<HomePage />);
     });
 
-    it("should set shows to be resolved data", () => {
-        expect(wrapper.state("showsData")).toBe(showsdata.data);
-    });
-
-    describe("after state updated",() => {
+    describe("after state updated", () => {
         beforeEach(() => {
             wrapper.setState({
-                showsData : showsdata.data
+                showsData: showsdata.data
             });
         });
 
-        it('should render ShowForm Component',() => {
+        it("should set shows to be resolved data", () => {
+            expect(wrapper.state("showsData")).toBe(showsdata.data);
+        });
+
+        it('should render ShowForm Component', () => {
             expect(wrapper.find(ShowForm).length).toBe(1);
         })
     })
